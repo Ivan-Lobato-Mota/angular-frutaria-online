@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+
+    --color-Brunswick: #A9A17B;
+    --color-Hooker: #56745C;
+    --color-Ecru: #A0986E;
+    --color-Ecru-light: #A9A17B;
+    --color-Sage: #B1AA87;
+}

@@ -1,0 +1,28 @@
+<div
+  class="bg-white shadow-md border-grey rounded-xl p-6 flex flex-col gap-6 relative"
+>
+    <div class="mx-auto">
+        <img src="{{ produto().urlimagem}}" class="w-[200px] h-[100px] object-contain"/>
+        @if (produto().estoque) {
+            <div class="flex flex-col mt-2">
+                <span class="text-md font-bold">{{ produto().nome }}</span>
+                <span class="text-sm">{{ produto().valor | currency : 'BRL' }}</span>
+                <app-primary-button label="Adicionar ao Carrinho" class="mt-3" (buttonClicked)="carrinhoServico.adicionarAoCarrinho(produto())"/>
+            </div>
+        } @else {
+            <div class="flex flex-col mt-2">
+                <span class="text-md font-bold">{{ produto().nome }}</span>
+                <span class="text-sm">{{ produto().valor | currency : 'BRL' }}</span>
+                <span class="text-white w-full border px-5 py-2 rounded-xl shadow-md mt-3 bg-stone-700"> Produto Indisponível </span>
+            </div> 
+        }
+        <span  class="absolute top-1 right-3 text-sm font-bold" [class]="produto().estoque ? 'text-green-900' : 'text-red-800'">
+            @if ( produto().estoque) {
+                {{ produto().estoque}} Restantes
+            } @else {
+                Produto Indisponível!
+            }
+        </span>
+    </div>
+ 
+</div>

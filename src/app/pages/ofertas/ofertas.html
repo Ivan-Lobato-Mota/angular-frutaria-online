@@ -1,0 +1,6 @@
+<div class="p-8 grid grid-cols-5 gap-3">
+@for (produto of Produtos(); track produto.id) {
+    <app-caixa-produto [produto]="produto" />
+}
+
+</div>

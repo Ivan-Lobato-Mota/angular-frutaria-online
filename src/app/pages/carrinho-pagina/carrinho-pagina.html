@@ -1,0 +1,9 @@
+<div class="p-6 flex flex-col gap-4">
+    <h2 class="text-2x1">Meu Carrinho</h2>
+
+    @for (item of carrinhoServico.carrinho(); track item.id) {
+
+        <app-itens-carrinho [item]="item" />
+    }
+
+</div>

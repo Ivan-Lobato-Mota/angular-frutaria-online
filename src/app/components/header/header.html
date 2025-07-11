@@ -1,0 +1,37 @@
+<div class="bg-Ecru px-4 py-1 shadow-md flex justify-between items-center">
+
+
+
+    <button class="image" routerLink="/">
+      <img src="/assets/logo_green.png" alt="Logo" class="w-[150px] h-[90px] object-contain">
+    </button>
+
+    <span class="text-x1 font-600">
+      Seja Bem vindo, <i>User</i>!
+    </span>
+
+    <button class="text-x1 font-bold" routerLink="/ofertas">
+      Ofertas
+    </button>
+
+    <button class="text-x1 font-bold" routerLink="/categorias">
+    Categorias
+    </button>
+
+    <button class="text-x1 font-bold" routerLink="/contato">
+      Contato
+    </button>
+
+    <button class="text-x1 font-bold" routerLink="/configuracoes">
+      Minha Conta
+    </button>
+
+    <button class="text-x1 font-bold" routerLink="/pedidos">
+    Meus Pedidos
+    </button>
+    <div>
+      <app-primary-button 
+        [label]="'Carrinho (' + carrinhoServico.carrinho().length + ')'" 
+        routerLink="/carrinho" />
+    </div>
+</div>
